@@ -14,5 +14,5 @@ steps:
   - 'deployment/nginx'
   - 'nginx=gcr.io/steadfast-helix-214610/nginx:$REVISION_ID'
   env:
-#  - 'CLOUDSDK_COMPUTE_ZONE=us-east4-b'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster1'
