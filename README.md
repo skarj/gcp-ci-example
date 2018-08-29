@@ -5,13 +5,13 @@
 * Activate service account
 
 ```bash
-        gcloud auth activate-service-account --key-file /path/to/credentials.json
+gcloud auth activate-service-account --key-file /path/to/credentials.json
 ```
 
 * Create infrastructure using terraform
 
 ```bash
-        terraform apply -var='credentials=/path/to/credentials.json'
+terraform apply -var='credentials=/path/to/credentials.json'
 ```
 
 * Deploy Kubernetes project
