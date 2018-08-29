@@ -3,4 +3,4 @@
 # Cloud Build API  should be enabled for GCP account https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=
 # Documentation https://www.terraform.io/docs/providers/google/r/container_cluster.html
 
-terraform apply -var='project=project_name' -var='credentials=/path/to/credentials.json'
+terraform apply -var='credentials=/path/to/credentials.json'
