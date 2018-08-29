@@ -2,8 +2,8 @@ variable "region" {
   default = "us-central1"
 }
 
-variable "project" {
-  description = "the GCP project project ID"
+variable "project_id" {
+  description = "the GCP project ID"
   default = "steadfast-helix-214610"
 }
 

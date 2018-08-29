@@ -3,6 +3,7 @@ resource "google_container_cluster" "primary" {
   description        = "${var.description}"
   zone               = "${data.google_compute_zones.available.names[0]}"
   initial_node_count = "${var.initial_node_count}"
+  project            = "${var.project_id}"
 
   addons_config {
     kubernetes_dashboard {
@@ -40,15 +41,3 @@ resource "google_container_cluster" "primary" {
     tags = ["${var.cluster_name}-cluster", "nodes"]
   }
 }
-
-# output "client_certificate" {
-#   value = "${google_container_cluster.primary.master_auth.0.client_certificate}"
-# }
-
-# output "client_key" {
-#   value = "${google_container_cluster.primary.master_auth.0.client_key}"
-# }
-
-# output "cluster_ca_certificate" {
-#   value = "${google_container_cluster.primary.master_auth.0.cluster_ca_certificate}"
-# }
