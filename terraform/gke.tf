@@ -40,4 +40,6 @@ resource "google_container_cluster" "primary" {
     # Tags can used to identify targets in firewall rules
     tags = ["${var.cluster_name}-cluster", "nodes"]
   }
+
+  depends_on = ["google_project_services.project"]
 }

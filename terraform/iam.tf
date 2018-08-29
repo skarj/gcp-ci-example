@@ -5,4 +5,6 @@ resource "google_project_iam_binding" "project" {
   members = [
     "serviceAccount:${data.google_project.current.number}@cloudbuild.gserviceaccount.com",
   ]
+
+  depends_on = ["google_project_services.project"]
 }

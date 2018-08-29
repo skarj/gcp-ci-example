@@ -4,7 +4,7 @@ variable "region" {
 
 variable "project_id" {
   description = "the GCP project ID"
-  default = "steadfast-helix-214610"
+  default = "quixotic-being-214814"
 }
 
 variable "credentials" {}
