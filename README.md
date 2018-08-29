@@ -1,20 +1,20 @@
 # Google Cloud Platform CI/CD example with Kubernetes Engine
 
-  * Activate service account
+* Activate service account
 
     gcloud auth activate-service-account --key-file /path/to/credentials.json
 
-  * Create infrastructure using terraform
+* Create infrastructure using terraform
 
     terraform apply -var='credentials=/path/to/credentials.json'
 
-  * Deploy Kubernetes project
+* Deploy Kubernetes project
 
     gcloud container clusters get-credentials $KE_CLUSTER_NAME --zone $GCP_ZONE --project $GCP_PROJECT_ID
     kubectl config set-context $(kubectl config current-context) --namespace=$KE_CLUSTER_NAMESPACE
     kubectl apply -f kubernetes/
 
-  * Configure CloudBuild
+* Configure CloudBuild
 ![Alt text](docs/images/CloudBuild.png?raw=true "CloudBuild configuration")
 
 
