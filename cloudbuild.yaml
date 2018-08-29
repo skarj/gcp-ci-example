@@ -4,15 +4,15 @@ steps:
 #- name: 'gcr.io/cloud-builders/npm'
 #  args: ['test']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "gcr.io/steadfast-helix-214610/nginx:$REVISION_ID", "/workspace/docker/"]
+  args: ["build", "-t", "gcr.io/quixotic-being-214814/nginx:$REVISION_ID", "/workspace/docker/"]
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "gcr.io/steadfast-helix-214610/nginx:$REVISION_ID"]
+  args: ["push", "gcr.io/quixotic-being-214814/nginx:$REVISION_ID"]
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - 'set'
   - 'image'
   - 'deployment/nginx'
-  - 'nginx=gcr.io/steadfast-helix-214610/nginx:$REVISION_ID'
+  - 'nginx=gcr.io/quixotic-being-214814/nginx:$REVISION_ID'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster1'
